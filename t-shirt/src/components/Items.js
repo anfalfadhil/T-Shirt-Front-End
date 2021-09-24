@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
-function Item() {
+function Items() {
   const [data, setData] = useState([]);
   const [imageId, setImageId] = useState();
   const api_key = process.env.REACT_APP_API_KEY;
@@ -21,7 +21,7 @@ function Item() {
     <div className="item-container">
       {data.map((e) => {
         return (
-          <Link to={`/item/${e.imageid}`} key={e.imageid}>
+          <Link to={`/items/${e.imageid}`} key={e.imageid}>
             <div className="card">
               <img src={e.baseimageurl} />
               <h2> Description</h2>
@@ -35,4 +35,4 @@ function Item() {
   );
 }
 
-export default Item;
+export default Items;
