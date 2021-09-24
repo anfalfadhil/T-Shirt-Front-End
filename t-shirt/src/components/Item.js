@@ -26,7 +26,7 @@ function Item() {
               <img src={e.baseimageurl} />
               <h2> Description</h2>
               <p>{e.desecription}</p>
-              <button>Buy</button>
+              <button type="submit">Buy</button>
             </div>
           </Link>
         );
