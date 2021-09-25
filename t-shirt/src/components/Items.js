@@ -1,31 +1,38 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import { APIURL } from "../config.js";
 
 function Items() {
   const [data, setData] = useState([]);
-  const [imageId, setImageId] = useState();
-  const api_key = process.env.REACT_APP_API_KEY;
-  useEffect(() => {
-    axios
-      .get(`###${api_key}`)
-      .then((response) => {
-        setData(response);
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
+  // const [imageId, setImageId] = useState();
+  // const api_key = process.env.REACT_APP_API_KEY;
+
+  useEffect(() =>
+  {
+    axios.get(`${APIURL}/items`)
+        .then( (response) =>
+        {
+          setData(response.data);
+        })
+        .catch(function (error)
+        {
+          console.log(error);
+        });
+      
   }, []);
 
   return (
     <div className="item-container">
-      {data.map((e) => {
+      {data.map( (item) =>
+      {
         return (
-          <Link to={`/items/${e.imageid}`} key={e.imageid}>
+          <Link to={`/items/${item._id}`} key={item._id}>
             <div className="card">
-              <img src={e.baseimageurl} />
-              <h2> Description</h2>
-              <p>{e.desecription}</p>
+              {/* <img src={e.baseimageurl} alt=""/> */}
+              <h2> {item.name} </h2>
+              <h3> Description </h3>
+              <p>{item.description}</p>
               <button type="submit">Buy</button>
             </div>
           </Link>
