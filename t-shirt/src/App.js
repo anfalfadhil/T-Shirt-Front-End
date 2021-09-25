@@ -38,15 +38,16 @@ const dummyOrderData = [
 function App() {
     return (
         <div className="App">
+            <Link to="/"> Home </Link>
             <h1> Welcome to T-Shirt</h1>
-            <Route path="/" exact component={Items} />
-            <Route path="/item/:itemid" exact>
-                <ItemDetails />
-            </Route>
-            <Route path="/order">
-                <OrderList items={dummyOrderData} />
-            </Route>
-            <Switch></Switch>
+
+            <Switch>
+                <Route path="/" exact component={Items} />
+                <Route path="/items/:id" exact component={ItemDetails} />
+                <Route path="/order">
+                    <OrderList items={dummyOrderData} />
+                </Route>
+            </Switch>
         </div>
     );
 }
