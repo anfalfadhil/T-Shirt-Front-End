@@ -31,7 +31,6 @@ function Items() {
             <div className="card">
               {/* <img src={e.baseimageurl} alt=""/> */}
               <h2> {item.name} </h2>
-              <h3> Description </h3>
               <p>{item.description}</p>
               <button type="submit">Buy</button>
             </div>
