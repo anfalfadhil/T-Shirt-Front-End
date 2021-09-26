@@ -31,7 +31,7 @@ function ItemDetails( {match} ) {
     axios.delete(url)
       .then(response => { setDeleted(true) } )
       .catch(console.error)
-      
+
   };
 
   if (deleted)
@@ -46,7 +46,8 @@ function ItemDetails( {match} ) {
       {/* <button onClick={onDeleteHandeler}>DELETE</button> */}
 
       <h2> {item.name} </h2>
-      <h2> {item.price} </h2>
+      <h3> {item.description} </h3>
+      <h3> {item.price} </h3>
 
       <button onClick={deleteItem}>Buy</button>
 

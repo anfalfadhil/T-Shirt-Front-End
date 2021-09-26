@@ -35,7 +35,6 @@ function Items() {
                 <h4> {item.description} </h4>
               </Link>
               
-              <button type="submit">Buy</button>
             </div>
           
         );
