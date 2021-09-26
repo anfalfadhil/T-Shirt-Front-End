@@ -41,6 +41,8 @@ function ItemDetails( {match} ) {
       {/* <button onClick={onDeleteHandeler}>DELETE</button> */}
 
       <h2> {item.name} </h2>
+      <h2> {item.price} </h2>
+      
       <button>Buy</button>
 
     </div>
