@@ -1,13 +1,13 @@
 import React from "react";
 import { useEffect, useState } from "react";
-// import { useParams } from "react-router-dom";
+import { Redirect } from "react-router-dom";
 import axios from "axios";
 import { APIURL } from "../config.js";
 
 function ItemDetails( {match} ) {
   // const [img, setImg] = useState({});
   // const { imageid } = useParams();
-  // const [deleted, setDeleted] = useState(false);
+  const [deleted, setDeleted] = useState(false);
   const [item, setItem] = useState({});
 
   useEffect( () =>
@@ -24,15 +24,23 @@ function ItemDetails( {match} ) {
       
   }, [match.params.id]);
 
-  // const onDeleteHandeler = (event) => {
-  //   const url = `${APIURL}/items/${match.params.id}`;
+  const deleteItem = (event) =>
+  {
+    const url = `${APIURL}/items/${match.params.id}`;
 
-  //   fetch(url, { method: "DELETE" })
-  //     .then((res) => {
-  //       setDeleted(true);
-  //     })
-  //     .catch(console.error);
-  // };
+    axios.delete(url)
+      .then(response => { setDeleted(true) } )
+      .catch(console.error)
+      // .then((res) => {
+      //   setDeleted(true);
+      // })
+      // .catch(console.error);
+  };
+
+  if (deleted)
+  {
+    return <Redirect to="/"/>;
+  }
 
   return (
     <div className="item-details-container">
@@ -42,8 +50,8 @@ function ItemDetails( {match} ) {
 
       <h2> {item.name} </h2>
       <h2> {item.price} </h2>
-      
-      <button>Buy</button>
+
+      <button onClick={deleteItem}>Buy</button>
 
     </div>
   );
