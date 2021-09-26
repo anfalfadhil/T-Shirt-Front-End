@@ -31,10 +31,7 @@ function ItemDetails( {match} ) {
     axios.delete(url)
       .then(response => { setDeleted(true) } )
       .catch(console.error)
-      // .then((res) => {
-      //   setDeleted(true);
-      // })
-      // .catch(console.error);
+      
   };
 
   if (deleted)
