@@ -27,14 +27,17 @@ function Items() {
       {data.map( (item) =>
       {
         return (
-          <Link to={`/items/${item._id}`} key={item._id}>
-            <div className="card">
+          
+            <div className="card" key={item._id}>
               {/* <img src={e.baseimageurl} alt=""/> */}
-              <h2> {item.name} </h2>
-              <p>{item.description}</p>
+              <Link to={`/items/${item._id}`}> 
+                <h2> {item.name} </h2>
+                <h4> {item.description} </h4>
+              </Link>
+              
               <button type="submit">Buy</button>
             </div>
-          </Link>
+          
         );
       })}
     </div>
