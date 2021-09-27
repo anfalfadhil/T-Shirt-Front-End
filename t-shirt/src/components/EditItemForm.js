@@ -8,7 +8,7 @@ import Button from "react-bootstrap/Button";
 import { Redirect } from "react-router";
 
 function EditItemForm({ match }) {
-    const itemId = match.params.itemId;
+    const itemId = match.params.id;
     const [name, setName] = useState("");
     const [description, setDescription] = useState("");
     const [price, setPrice] = useState("");
