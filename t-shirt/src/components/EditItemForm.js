@@ -9,7 +9,6 @@ import { Redirect } from "react-router";
 
 function EditItemForm({ match }) {
     const itemId = match.params.itemId;
-    const [item, setItem] = useState({});
     const [name, setName] = useState("");
     const [description, setDescription] = useState("");
     const [price, setPrice] = useState("");
@@ -22,7 +21,6 @@ function EditItemForm({ match }) {
         axios
             .get(url)
             .then((res) => {
-                setItem(res.data);
                 setName(res.data.name);
                 setDescription(res.data.description);
                 setPrice(res.data.price);
@@ -47,7 +45,7 @@ function EditItemForm({ match }) {
     };
 
     if (returnedId) {
-        return <Redirect to={`/item/${itemId}`} />;
+        return <Redirect to={`/items/${itemId}`} />;
     }
 
     return (

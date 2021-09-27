@@ -46,7 +46,7 @@ function App() {
             <Switch>
                 <Route path="/" exact component={Items} />
                 <Route path="/items/:id" exact component={ItemDetails} />
-                <Route path="/item/:itemId/edit" component={EditItemForm} />
+                <Route path="/items/:itemId/edit" component={EditItemForm} />
                 <Route path="/order">
                     <OrderList items={dummyOrderData} />
                 </Route>
