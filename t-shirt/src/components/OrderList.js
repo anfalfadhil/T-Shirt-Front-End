@@ -5,7 +5,7 @@ function OrderList({ items }) {
     return (
         <div className="order-container">
             {items.map((item) => (
-                <div className="order-item">
+                <div key={item._id} className="order-item">
                     <Link to={`/item/${item._id}`}>{item.name}</Link>
                     <p>${item.price}</p>
                 </div>
