@@ -1,29 +1,56 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Redirect } from "react-router-dom";
 import axios from "axios";
+import { APIURL } from "../config.js";
 
-function ItemDetails() {
-  const [img, setImg] = useState({});
-  const { imageid } = useParams();
+function ItemDetails( {match} ) {
+  // const [img, setImg] = useState({});
+  // const { imageid } = useParams();
+  const [deleted, setDeleted] = useState(false);
+  const [item, setItem] = useState({});
 
-  useEffect(() => {
-    axios
-      .get(`###${imageid}`)
-      .then((response) => {
-        console.log(response);
-        setImg(response);
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
-  }, []);
+  useEffect( () =>
+  {
+    axios.get(`${APIURL}/items/${match.params.id}`)
+        .then( (response) =>
+        {
+          setItem(response.data);
+        })
+        .catch(function (error)
+        {
+          console.log(error);
+        });
+      
+  }, [match.params.id]);
+
+  const deleteItem = (event) =>
+  {
+    const url = `${APIURL}/items/${match.params.id}`;
+
+    axios.delete(url)
+      .then(response => { setDeleted(true) } )
+      .catch(console.error)
+
+  };
+
+  if (deleted)
+  {
+    return <Redirect to="/"/>;
+  }
 
   return (
     <div className="item-details-container">
-      <h2 className="title">{img.title}</h2>
-      <img className="chosen-item" src={img.image} />
-      <button type="buy">Buy</button>
+      {/* <h2 className="title">{img.title}</h2>
+      <img className="chosen-item" src={img.image} /> */}
+      {/* <button onClick={onDeleteHandeler}>DELETE</button> */}
+
+      <h2> {item.name} </h2>
+      <h3> {item.description} </h3>
+      <h3> {item.price} </h3>
+
+      <button onClick={deleteItem}>Buy</button>
+
     </div>
   );
 }
