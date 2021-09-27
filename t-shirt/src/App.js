@@ -5,6 +5,7 @@ import Items from "./components/Items";
 import ItemDetails from "./components/ItemDetails";
 import EditItemForm from "./components/EditItemForm";
 import OrderList from "./components/OrderList";
+import PostNewItem from "./components/PostNewItem";
 
 const dummyOrderData = [
     {
@@ -41,12 +42,15 @@ function App() {
     return (
         <div className="App">
             <Link to="/"> Home </Link>
+            <Link to="/items/new"> Add New Item </Link>
+            <Link to="/order">Cart</Link>
             <h1> Welcome to T-Shirt</h1>
 
             <Switch>
                 <Route path="/" exact component={Items} />
+                <Route path="/items/new" component={PostNewItem} />
                 <Route path="/items/:id" exact component={ItemDetails} />
-                <Route path="/items/:itemId/edit" component={EditItemForm} />
+                <Route path="/items/:id/edit" component={EditItemForm} />
                 <Route path="/order">
                     <OrderList items={dummyOrderData} />
                 </Route>
