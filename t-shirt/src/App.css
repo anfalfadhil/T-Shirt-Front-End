@@ -1,3 +1,4 @@
+
 .App {
     text-align: center;
 }
@@ -42,3 +43,13 @@
     justify-content: space-between;
     margin: 0px 10px;
 }
+.order-item-right-div {
+    display: flex;
+    justify-content: space-between;
+    width: 150px;
+}
+
+body {
+    background-color: rgb(129, 202, 69);
+}
+
