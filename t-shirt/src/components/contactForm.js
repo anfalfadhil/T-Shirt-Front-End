@@ -1,4 +1,8 @@
 import React, { useRef } from "react";
+
+//Must install this -
+//npm install emailjs-com --save
+
 import emailjs from "emailjs-com";
 
 const ContactUs = () => {
