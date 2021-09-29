@@ -6,15 +6,22 @@ import ItemDetails from "./components/ItemDetails";
 import EditItemForm from "./components/EditItemForm";
 import OrderList from "./components/OrderList";
 import PostNewItem from "./components/PostNewItem";
+import Navbar from 'react-bootstrap/Navbar'
+import Container from "react-bootstrap/Container";
 
 function App() {
     return (
         <div className="App">
 
             <div className="main-header">
-                <Link to="/"> Home </Link>
-                <Link to="/items/new"> Add New Item </Link>
-                <Link to="/order">Cart</Link>
+                <Navbar className="nav-bar">
+                    <Container>
+                        <Link to="/"> Home </Link>
+                        <Link to="/items/new"> Add New Item </Link>
+                        <Link to="/order"> Cart </Link>
+                    </Container>
+                </Navbar>
+                
                 <h1> Welcome to T-Shirt</h1>
             </div>
 
