@@ -30,7 +30,19 @@ const ContactUs = () => {
     e.target.reset();
   };
 
+  //if order is placed render the email via ternary operator
+
+  //make route in react based off of order completion
+
   return (
+    // code to render form
+
+    // {
+    //     //   ifCheckoutComplete (filler variable)
+    //     //    ?
+    //     //     <p>Render Image Tag Here</p> : null
+    //        }
+
     <form className="form-container" ref={form} onSubmit={sendEmail}>
       <label>Name</label>
       <input type="text" name="user_name" />
