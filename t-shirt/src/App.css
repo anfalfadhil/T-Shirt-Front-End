@@ -1,24 +1,12 @@
 body {
-    background-color: rgb(129, 202, 69);
+    background-color: #ffffff;
 }
 
 
-.app{
-
-    grid-template-rows: repeat(10, 1fr);
-    grid-template-columns: repeat(4, 1fr);
- 
-    border-radius: 5px;
-   
-    height: 100%;
-    width: 100%;
-    margin:auto;
-    padding: auto;
-  }
-  
    img {
-    max-width: 500px;
-    max-height: 500px;
+    max-width: 250px;
+    max-height: 250px;
+    border-radius: 10px;
   }
   .item-container {
     display: flex;
@@ -39,11 +27,12 @@ body {
    }
 
    .card {
-    border-radius: 40px;
-     background-color: rgb(241, 235, 247);
+    border-radius: 10px;
      display:inline-block;
      position: relative; 
      margin: 10px;
+     max-width: 250px;
+     max-height: 250px;
    }
    
    .card:before {
