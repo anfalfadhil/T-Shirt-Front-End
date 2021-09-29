@@ -6,10 +6,7 @@ import { APIURL } from "../config.js";
 import Button from "react-bootstrap/Button";
 
 function ItemDetails({ match }) {
-<<<<<<< HEAD
-=======
 
->>>>>>> e49a742f280343107c13daadbc45acf2ecdd6ce4
   const [deleted, setDeleted] = useState(false);
   const [item, setItem] = useState({});
   const [editing, setEditing] = useState(false);
@@ -41,11 +38,15 @@ function ItemDetails({ match }) {
   };
 
   if (deleted) {
-    return <Redirect to="/" />;
+    return (
+    <Redirect to="/" />
+    )
   }
 
   if (editing) {
-    return <Redirect to={`/items/${match.params.id}/edit`} />;
+    return (
+    <Redirect to={`/items/${match.params.id}/edit`} />
+    )
   }
 
   return (
@@ -53,10 +54,7 @@ function ItemDetails({ match }) {
       <h2> {item.name} </h2>
       <h3> {item.description} </h3>
       <h3> {item.price} </h3>
-<<<<<<< HEAD
       <img src={item.image} />
-=======
->>>>>>> e49a742f280343107c13daadbc45acf2ecdd6ce4
 
       <Button variant="secondary" onClick={deleteItem}>
         Buy
@@ -66,9 +64,7 @@ function ItemDetails({ match }) {
       </Button>
     </div>
   );
-<<<<<<< HEAD
-=======
-=======
+  }
     const [deleted, setDeleted] = useState(false);
     const [item, setItem] = useState({});
     const [editing, setEditing] = useState(false);
@@ -134,15 +130,19 @@ function ItemDetails({ match }) {
     };
 
     if (deleted) {
-        return <Redirect to="/" />;
+        
+        <Redirect to="/" />
+       
     }
 
     if (editing) {
-        return <Redirect to={`/items/${match.params.id}/edit`} />;
+       
+        <Redirect to={`/items/${match.params.id}/edit`} />
+      
     }
 
     if (showCart) {
-        return <Redirect to="/order" />;
+        <Redirect to="/order" />;
     }
 
     return (
@@ -163,7 +163,6 @@ function ItemDetails({ match }) {
         </div>
     );
 
->>>>>>> e49a742f280343107c13daadbc45acf2ecdd6ce4
 }
 
 export default ItemDetails;
