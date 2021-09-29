@@ -86,7 +86,7 @@ function ItemDetails({ match }) {
         <div className="item-details-container">
             <h2> {item.name} </h2>
             <h3> {item.description} </h3>
-            <h3> {item.price} </h3>
+            <h3> ${item.price} </h3>
 
             <Button variant="secondary" onClick={addItemToCart}>
                 Add To Cart

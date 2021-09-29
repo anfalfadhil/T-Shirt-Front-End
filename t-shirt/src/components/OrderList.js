@@ -62,19 +62,20 @@ function OrderList() {
                     <div className="order-item-right-div">
                         <p>${item.price}</p>
                         <Button
-                            variant="danger"
+                            variant="outline-danger"
                             size="sm"
                             onClick={removeItem(item._id)}
+                            className="order-remove-button"
                         >
                             Remove
                         </Button>
                     </div>
                 </div>
             ))}
-            <Button variant="danger" onClick={clearCart}>
+            <Button id="clear-cart-button" variant="outline-danger" onClick={clearCart}>
                 Clear Cart
             </Button>
-            <Button variant="primary" onClick={closeoutCart}>
+            <Button variant="outline-success" onClick={closeoutCart}>
                 Finalize Purchase
             </Button>
         </div>
