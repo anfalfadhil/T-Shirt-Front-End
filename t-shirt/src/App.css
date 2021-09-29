@@ -18,6 +18,11 @@
     margin-bottom: 2%;
 }
 
+img
+{
+    max-width: 20%;
+}
+
 .order-item {
     display: flex;
     justify-content: space-between;
