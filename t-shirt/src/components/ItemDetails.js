@@ -22,40 +22,6 @@ function ItemDetails({ match }) {
       });
   }, [match.params.id]);
 
-  useEffect(() => {
-    axios
-      .get(`${APIURL}/items/${match.params.id}`)
-      .then((response) => {
-        setItem(response.data);
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
-  }, [match.params.id]);
-
-  const deleteItem = (event) => {
-    const url = `${APIURL}/items/${match.params.id}`;
-
-    axios
-      .delete(url)
-      .then((response) => {
-        setDeleted(true);
-      })
-      .catch(console.error);
-  };
-
-  const editItem = () => {
-    setEditing(true);
-  };
-
-  if (deleted) {
-    return <Redirect to="/" />;
-  }
-
-  if (editing) {
-    return <Redirect to={`/items/${match.params.id}/edit`} />;
-  }
-
   const addItemToCart = () => {
     axios
       .get(`${APIURL}/order`)
@@ -86,24 +52,38 @@ function ItemDetails({ match }) {
       });
   };
 
+  const deleteItem = () => {
+    const url = `${APIURL}/items/${match.params.id}`;
+
+    axios
+      .delete(url)
+      .then((response) => {
+        setDeleted(true);
+      })
+      .catch(console.error);
+  };
+
+  const editItem = () => {
+    setEditing(true);
+  };
+
   if (deleted) {
-    <Redirect to="/" />;
+    return <Redirect to="/" />;
   }
 
   if (editing) {
-    <Redirect to={`/items/${match.params.id}/edit`} />;
+    return <Redirect to={`/items/${match.params.id}/edit`} />;
   }
 
   if (showCart) {
-    <Redirect to="/order" />;
+    return <Redirect to="/order" />;
   }
 
   return (
     <div className="item-details-container">
       <h2> {item.name} </h2>
       <h3> {item.description} </h3>
-      <h3> {item.price} </h3>
-      <img src={item.image} />
+      <h3> ${item.price} </h3>
 
       <Button variant="secondary" onClick={addItemToCart}>
         Add To Cart
