@@ -5,18 +5,18 @@ import { APIURL } from "../config.js";
 import SearchBar from "./SearchBar.js";
 
 function Items() {
-    const [data, setData] = useState([]);
+  const [data, setData] = useState([]);
 
-    useEffect(() => {
-        axios
-            .get(`${APIURL}/items`)
-            .then((response) => {
-                setData(response.data);
-            })
-            .catch(function (error) {
-                console.log(error);
-            });
-    }, []);
+  useEffect(() => {
+    axios
+      .get(`${APIURL}/items`)
+      .then((response) => {
+        setData(response.data);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  }, []);
 
     return (
         <div className="item-container">
