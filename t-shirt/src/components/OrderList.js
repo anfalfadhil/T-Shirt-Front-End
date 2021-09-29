@@ -60,7 +60,7 @@ function OrderList() {
                 <div key={item._id} className="order-item">
                     <Link to={`/items/${item._id}`}>{item.name}</Link>
                     <div className="order-item-right-div">
-                        <p className="">${item.price}</p>
+                        <p>${item.price}</p>
                         <Button
                             variant="outline-danger"
                             size="sm"
