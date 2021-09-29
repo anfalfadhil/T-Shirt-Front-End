@@ -52,7 +52,7 @@ function SearchBar({ onSubmit }) {
                     />
                 </Col>
                 <Col sm="2">
-                    <Button variant="secondary" onClick={onSubmitFormHandler}>
+                    <Button variant="outline-dark" onClick={onSubmitFormHandler}>
                         Submit
                     </Button>
                 </Col>
