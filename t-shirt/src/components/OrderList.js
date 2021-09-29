@@ -60,11 +60,12 @@ function OrderList() {
                 <div key={item._id} className="order-item">
                     <Link to={`/items/${item._id}`}>{item.name}</Link>
                     <div className="order-item-right-div">
-                        <p>${item.price}</p>
+                        <p className="">${item.price}</p>
                         <Button
-                            variant="danger"
+                            variant="outline-danger"
                             size="sm"
                             onClick={removeItem(item._id)}
+                            className="order-remove-button"
                         >
                             Remove
                         </Button>
