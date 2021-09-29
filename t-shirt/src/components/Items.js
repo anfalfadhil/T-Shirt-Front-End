@@ -28,7 +28,7 @@ function Items() {
             <Link to={`/items/${item._id}`}>
               <h2> {item.name} </h2>
               <h2>${item.price}</h2>
-              <img src={item.image} />
+              <img src={item.image} alt={item.name}/>
             </Link>
           </div>
         );
