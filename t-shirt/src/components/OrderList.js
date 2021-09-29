@@ -18,7 +18,7 @@ function OrderList() {
                 setOrderId(res.data[0]._id);
             })
             .catch((err) => console.log(err));
-    }, []);
+    }, [url]);
 
     const removeItem = (itemId) => {
         return () => {

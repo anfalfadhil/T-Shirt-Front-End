@@ -26,7 +26,7 @@ function EditItemForm({ match }) {
                 setPrice(res.data.price);
             })
             .catch((err) => console.log(err));
-    }, []);
+    }, [itemId]);
 
     const onSubmitFormHandler = () => {
         const url = `${APIURL}/items/${itemId}`;
