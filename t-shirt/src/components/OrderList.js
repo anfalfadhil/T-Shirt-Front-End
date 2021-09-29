@@ -72,10 +72,10 @@ function OrderList() {
                     </div>
                 </div>
             ))}
-            <Button variant="danger" onClick={clearCart}>
+            <Button id="clear-cart-button" variant="outline-danger" onClick={clearCart}>
                 Clear Cart
             </Button>
-            <Button variant="primary" onClick={closeoutCart}>
+            <Button variant="outline-success" onClick={closeoutCart}>
                 Finalize Purchase
             </Button>
         </div>

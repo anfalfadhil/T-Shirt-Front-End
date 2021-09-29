@@ -10,10 +10,13 @@ import PostNewItem from "./components/PostNewItem";
 function App() {
     return (
         <div className="App">
-            <Link to="/"> Home </Link>
-            <Link to="/items/new"> Add New Item </Link>
-            <Link to="/order">Cart</Link>
-            <h1> Welcome to T-Shirt</h1>
+
+            <div className="main-header">
+                <Link to="/"> Home </Link>
+                <Link to="/items/new"> Add New Item </Link>
+                <Link to="/order">Cart</Link>
+                <h1> Welcome to T-Shirt</h1>
+            </div>
 
             <Switch>
                 <Route path="/" exact component={Items} />
