@@ -11,7 +11,7 @@ import React from "react";
 
 const Bitcoin = () => {
   return (
-    <div>
+    <div className="bitcoin">
       {/* code to render image */}
 
       {/* {
