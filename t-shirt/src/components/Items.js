@@ -21,7 +21,7 @@ function Items() {
   return (
     <div className="item-container">
       <SearchBar onSubmit={setData} />
-      {console.log(data)};
+      {console.log(data)}
       {data.map((item) => {
         return (
           <div className="card" key={item._id}>
