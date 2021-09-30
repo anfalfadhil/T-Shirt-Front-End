@@ -27,7 +27,7 @@ function ItemDetails({ match }) {
             .get(`${APIURL}/order`)
             .then((response) => {
                 console.log("The Response:", response)
-                const order = response.data[0];
+                const order = response.data;
                 console.log("The Order Obj", order)
                 const checkIndex = order.items.findIndex(
                     (element) => element._id === item._id
