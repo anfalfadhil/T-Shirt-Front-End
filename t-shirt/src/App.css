@@ -46,7 +46,7 @@ img
     margin-right: 3%;
 }
 
-.new-item-save-button
+.new-item-save-button, .edit-item-save-button
 {
     padding: 1% 10%;
     margin-top: 2%;

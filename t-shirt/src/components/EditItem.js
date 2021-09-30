@@ -99,8 +99,12 @@ function EditItem({ match }) {
                     />
                 </Col>
             </Form.Group>
-            <Button variant="outline-success" size="lg" onClick={onSubmitFormHandler}>
-                Save
+            <Button
+                className="edit-item-save-button"
+                variant="outline-success" 
+                size="lg" 
+                onClick={onSubmitFormHandler}
+                >Save
             </Button>
         </Form>
     );
