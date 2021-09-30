@@ -35,6 +35,7 @@ function EditItem({ match }) {
             name: name,
             description: description,
             price: price,
+            image: imageUrl
         };
 
         axios
