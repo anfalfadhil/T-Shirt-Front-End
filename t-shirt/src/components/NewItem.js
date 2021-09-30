@@ -39,7 +39,7 @@ const NewItem = () =>
     return (
         <Form>
 
-            <Form.Group as={Row} controlId="nameInput">
+            <Form.Group as={Row} controlId="nameInput" className="spacing-groups">
                 <Form.Label column sm="2">
                     Name
                 </Form.Label>
@@ -52,7 +52,7 @@ const NewItem = () =>
                 </Col>
             </Form.Group>
 
-            <Form.Group as={Row} controlId="descriptionInput">
+            <Form.Group as={Row} controlId="descriptionInput" className="spacing-groups">
                 <Form.Label column sm="2">
                     Description
                 </Form.Label>
@@ -65,7 +65,7 @@ const NewItem = () =>
                 </Col>
             </Form.Group>
 
-            <Form.Group as={Row} controlId="priceInput">
+            <Form.Group as={Row} controlId="priceInput" className="spacing-groups">
                 <Form.Label column sm="2">
                     Price
                 </Form.Label>
@@ -78,7 +78,7 @@ const NewItem = () =>
                 </Col>
             </Form.Group>
 
-            <Form.Group as={Row} controlId="imageInput">
+            <Form.Group as={Row} controlId="imageInput" className="spacing-groups">
                 <Form.Label column sm="2">
                     Image URL
                 </Form.Label>

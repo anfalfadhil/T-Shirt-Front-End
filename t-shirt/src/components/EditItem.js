@@ -24,6 +24,7 @@ function EditItem({ match }) {
                 setName(res.data.name);
                 setDescription(res.data.description);
                 setPrice(res.data.price);
+                setImageUrl(res.data.image);
             })
             .catch((err) => console.log(err));
     }, [itemId]);
@@ -50,7 +51,7 @@ function EditItem({ match }) {
 
     return (
         <Form>
-            <Form.Group as={Row} controlId="nameInput">
+            <Form.Group as={Row} controlId="nameInput" className="spacing-groups">
                 <Form.Label column sm="2">
                     Name
                 </Form.Label>
@@ -62,7 +63,7 @@ function EditItem({ match }) {
                     />
                 </Col>
             </Form.Group>
-            <Form.Group as={Row} controlId="descriptionInput">
+            <Form.Group as={Row} controlId="descriptionInput" className="spacing-groups">
                 <Form.Label column sm="2">
                     Description
                 </Form.Label>
@@ -74,7 +75,7 @@ function EditItem({ match }) {
                     />
                 </Col>
             </Form.Group>
-            <Form.Group as={Row} controlId="priceInput">
+            <Form.Group as={Row} controlId="priceInput" className="spacing-groups">
                 <Form.Label column sm="2">
                     Price
                 </Form.Label>
@@ -86,7 +87,7 @@ function EditItem({ match }) {
                     />
                 </Col>
             </Form.Group>
-            <Form.Group as={Row} controlId="imageInput">
+            <Form.Group as={Row} controlId="imageInput" className="spacing-groups">
                 <Form.Label column sm="2">
                     Image URL
                 </Form.Label>
@@ -98,7 +99,7 @@ function EditItem({ match }) {
                     />
                 </Col>
             </Form.Group>
-            <Button variant="primary" onClick={onSubmitFormHandler}>
+            <Button variant="outline-success" size="lg" onClick={onSubmitFormHandler}>
                 Save
             </Button>
         </Form>
