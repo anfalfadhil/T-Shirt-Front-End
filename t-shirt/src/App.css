@@ -46,6 +46,12 @@ img
     margin-right: 3%;
 }
 
+.new-item-save-button
+{
+    padding: 1% 10%;
+    margin-top: 2%;
+}
+
 .order-item {
     display: flex;
     justify-content: space-between;

@@ -91,8 +91,12 @@ const NewItem = () =>
                 </Col>
             </Form.Group>
 
-            <Button variant="outline-primary" size="lg" onClick={handleSubmit}>
-                Save
+            <Button
+                className="new-item-save-button"
+                variant="outline-primary" 
+                size="lg" 
+                onClick={handleSubmit}
+                >Save
             </Button>
 
         </Form>
