@@ -33,6 +33,9 @@ This is a react based application where people can buy and/or sell items. Users 
 - Node.js
 - Git
 
+## Api
+[The T-Shirt API Documentation](https://github.com/racevedo12/T-Shirt-Back-End)
+
 ## Installation/Running the app
 - Fork this repository.
 - Clone your forked repository.
