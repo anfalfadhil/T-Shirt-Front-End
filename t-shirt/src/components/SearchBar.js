@@ -52,8 +52,11 @@ function SearchBar({ onSubmit }) {
                     />
                 </Col>
                 <Col sm="2">
-                    <Button variant="outline-dark" onClick={onSubmitFormHandler}>
-                        Submit
+                    <Button
+                        className="searchbar-button"
+                        variant="outline-dark" 
+                        onClick={onSubmitFormHandler}
+                        >Submit
                     </Button>
                 </Col>
             </Form.Group>
