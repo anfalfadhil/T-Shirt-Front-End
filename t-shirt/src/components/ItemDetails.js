@@ -26,6 +26,7 @@ function ItemDetails({ match }) {
         axios
             .get(`${APIURL}/order`)
             .then((response) => {
+                console.log("The Response:", response)
                 const order = response.data[0];
                 console.log("The Order Obj", order)
                 const checkIndex = order.items.findIndex(
