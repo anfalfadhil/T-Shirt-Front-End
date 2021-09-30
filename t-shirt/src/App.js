@@ -8,6 +8,7 @@ import OrderList from "./components/OrderList";
 import PostNewItem from "./components/PostNewItem";
 import Bitcoin from "./components/Bitcoin";
 import ContactUs from "./components/ContactForm";
+import Review from "./components/Review";
 
 const dummyOrderData = [
   {
@@ -46,6 +47,12 @@ function App() {
       <Link to="/"> Home </Link>
       <Link to="/items/new"> Add New Item </Link>
       <Link to="/order">Cart</Link>
+
+      <br />
+      <Link to="/email">Email -</Link>
+
+      <Link to="/bitcoin"> Pay in Bitcoin?</Link>
+
       <h1> Welcome to T-Shirt</h1>
 
       <Switch>
@@ -56,6 +63,9 @@ function App() {
         <Route path="/order">
           <OrderList items={dummyOrderData} />
         </Route>
+        {/* <Route path="/review" component={Review} /> */}
+        <Route path="/email" component={ContactUs} />
+        <Route path="/bitcoin" component={Bitcoin} />
       </Switch>
     </div>
   );

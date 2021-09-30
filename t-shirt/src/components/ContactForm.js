@@ -13,7 +13,7 @@ const ContactUs = () => {
 
     emailjs
       .sendForm(
-        "gmail",
+        "service_tzz4lto",
         "template_5c8dbza",
         e.target,
         //   form.current,
