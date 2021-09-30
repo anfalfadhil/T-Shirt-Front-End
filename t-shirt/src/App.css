@@ -1,11 +1,23 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap');
+
+/* Default Styles */
 
 .App {
     text-align: center;
+    font-family: 'Poppins', sans-serif;
 }
 
 .main-header
 {
     margin-bottom: 3%;
+}
+
+.searchbar-button
+{
+    padding: 4% 30%;
+    margin-right: 5%;
 }
 
 .card
@@ -21,6 +33,29 @@
 img
 {
     max-width: 20%;
+}
+
+.item-details-container
+{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.spacing-groups
+{
+    margin-bottom: 1%;
+}
+
+.item-details-buttons
+{
+    margin-top: 2%;
+    padding: 1% 2%;
+    margin-right: 3%;
+}
+
+.new-item-save-button, .edit-item-save-button
+{
+    padding: 1% 10%;
+    margin-top: 2%;
 }
 
 .order-item {

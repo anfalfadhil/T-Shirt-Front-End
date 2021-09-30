@@ -3,9 +3,11 @@ import "./App.css";
 import { Link, Route, Switch } from "react-router-dom";
 import Items from "./components/Items";
 import ItemDetails from "./components/ItemDetails";
-import EditItemForm from "./components/EditItemForm";
+import NewItem from "./components/NewItem";
+import EditItem from "./components/EditItem";
 import OrderList from "./components/OrderList";
-import PostNewItem from "./components/PostNewItem";
+// import PostNewItem from "./components/PostNewItem";
+
 import Navbar from 'react-bootstrap/Navbar'
 import Container from "react-bootstrap/Container";
 
@@ -27,9 +29,9 @@ function App() {
 
             <Switch>
                 <Route path="/" exact component={Items} />
-                <Route path="/items/new" component={PostNewItem} />
+                <Route path="/items/new" component={NewItem} />
                 <Route path="/items/:id" exact component={ItemDetails} />
-                <Route path="/items/:id/edit" component={EditItemForm} />
+                <Route path="/items/:id/edit" component={EditItem} />
                 <Route path="/order" component={OrderList} />
             </Switch>
         </div>

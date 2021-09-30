@@ -84,18 +84,30 @@ function ItemDetails({ match }) {
 
     return (
         <div className="item-details-container">
+            <img src={item.image} alt={item.name} /> 
             <h2> {item.name} </h2>
-            <h3> {item.description} </h3>
-            <h3> ${item.price} </h3>
+            <h4> {item.description} </h4>
+            <h4> ${item.price} </h4>
 
-            <Button variant="secondary" onClick={addItemToCart}>
-                Add To Cart
+            <Button 
+                className="item-details-buttons"
+                variant="outline-success" 
+                onClick={addItemToCart} 
+                >Add To Cart
             </Button>
-            <Button variant="secondary" onClick={editItem}>
-                Edit
+
+            <Button
+                className="item-details-buttons"
+                variant="outline-primary" 
+                onClick={editItem}
+                >Edit
             </Button>
-            <Button variant="secondary" onClick={deleteItem}>
-                Delete
+
+            <Button
+                className="item-details-buttons"
+                variant="outline-danger" 
+                onClick={deleteItem}
+                >Delete
             </Button>
         </div>
     );
