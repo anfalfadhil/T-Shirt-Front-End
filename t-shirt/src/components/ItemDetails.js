@@ -88,14 +88,25 @@ function ItemDetails({ match }) {
             <h3> {item.description} </h3>
             <h4> ${item.price} </h4>
 
-            <Button variant="outline-success" onClick={addItemToCart}>
-                Add To Cart
+            <Button 
+                className="item-details-buttons"
+                variant="outline-success" 
+                onClick={addItemToCart} 
+                >Add To Cart
             </Button>
-            <Button variant="outline-primary" onClick={editItem}>
-                Edit
+
+            <Button
+                className="item-details-buttons"
+                variant="outline-primary" 
+                onClick={editItem}
+                >Edit
             </Button>
-            <Button variant="outline-danger" onClick={deleteItem}>
-                Delete
+
+            <Button
+                className="item-details-buttons"
+                variant="outline-danger" 
+                onClick={deleteItem}
+                >Delete
             </Button>
         </div>
     );
