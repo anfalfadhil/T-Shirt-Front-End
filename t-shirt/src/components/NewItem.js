@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { APIURL } from "../config.js";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
@@ -7,49 +7,38 @@ import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
 import { Redirect } from "react-router";
 
-function EditItemForm({ match }) {
-    const itemId = match.params.id;
+const NewItem = () => 
+{
     const [name, setName] = useState("");
     const [description, setDescription] = useState("");
     const [price, setPrice] = useState("");
     const [imageUrl, setImageUrl] = useState("");
-    const [returnedId, setReturnedId] = useState("");
+    const [createdId, setCreatedId] = useState(null);
 
-    useEffect(() => {
-        const url = `${APIURL}/items/${itemId}`;
+    const handleSubmit = (e) =>
+    {
+        const url = `${APIURL}/items`;
 
-        axios
-            .get(url)
-            .then((res) => {
-                setName(res.data.name);
-                setDescription(res.data.description);
-                setPrice(res.data.price);
-            })
-            .catch((err) => console.log(err));
-    }, [itemId]);
-
-    const onSubmitFormHandler = () => {
-        const url = `${APIURL}/items/${itemId}`;
-        const updatedItem = {
+        const newItem = 
+        {
             name: name,
             description: description,
             price: price,
+            image: imageUrl
         };
 
-        axios
-            .put(url, updatedItem)
-            .then((res) => {
-                setReturnedId(res.data._id);
-            })
-            .catch((err) => console.log(err));
-    };
+        axios.post(url, newItem)
+            .then(res => setCreatedId(res.data._id))
+            .catch((err) => console.log(err))
+    }
 
-    if (returnedId) {
-        return <Redirect to={`/items/${itemId}`} />;
+    if (createdId) {
+        return <Redirect to={`/items/${createdId}`} />;
     }
 
     return (
         <Form>
+
             <Form.Group as={Row} controlId="nameInput">
                 <Form.Label column sm="2">
                     Name
@@ -62,6 +51,7 @@ function EditItemForm({ match }) {
                     />
                 </Col>
             </Form.Group>
+
             <Form.Group as={Row} controlId="descriptionInput">
                 <Form.Label column sm="2">
                     Description
@@ -74,6 +64,7 @@ function EditItemForm({ match }) {
                     />
                 </Col>
             </Form.Group>
+
             <Form.Group as={Row} controlId="priceInput">
                 <Form.Label column sm="2">
                     Price
@@ -86,6 +77,7 @@ function EditItemForm({ match }) {
                     />
                 </Col>
             </Form.Group>
+
             <Form.Group as={Row} controlId="imageInput">
                 <Form.Label column sm="2">
                     Image URL
@@ -98,11 +90,53 @@ function EditItemForm({ match }) {
                     />
                 </Col>
             </Form.Group>
-            <Button variant="primary" onClick={onSubmitFormHandler}>
+
+            <Button variant="outline-primary" size="lg" onClick={handleSubmit}>
                 Save
             </Button>
-        </Form>
-    );
-}
 
-export default EditItemForm;
+        </Form>
+    )
+    // <form onSubmit={handleSubmit}>
+    //     <label htmlFor="title">Title:</label>
+    //     <input
+    //         placeholder="item name"
+    //         value={item.name}
+    //         title="title"
+    //         onChange={handleChange}
+    //         required
+    //         id="name"
+    //         name="name"
+    //     />
+    //     <label htmlFor="description">Description:</label>
+    //     <input
+    //         placeholder="item description"
+    //         value={item.description}
+    //         name="description"
+    //         onChange={handleChange}
+    //         id="description"
+    //     />
+
+    //     <label htmlFor="price">Price:</label>
+    //     <input
+    //         placeholder="item price"
+    //         value={item.price}
+    //         name="price"
+    //         onChange={handleChange}
+    //         id="price"
+    //     />
+
+    //     <label htmlFor="image-link">Enter a link to your image</label>
+    //     <input
+    //         placeholder="item image link"
+    //         value={item.image}
+    //         name="image"
+    //         onChange={handleChange}
+    //         id="image"
+    //     />
+
+    //     <button type="submit">Submit</button>
+    // </form>
+};
+
+export default NewItem;
