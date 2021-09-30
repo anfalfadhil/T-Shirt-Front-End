@@ -1,70 +1,55 @@
-# Getting Started with Create React App
+# T-Shirt
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Description 
+This is a react based application where people can buy and/or sell items. Users can view lists of items for sale and select them to add to an order. Users can also post items for sale, update post information, and remove posts.
 
-## Available Scripts
+## Screenshots
+### Main Page
+![Main Page](https://user-images.githubusercontent.com/58488936/135542225-9d96167a-81b3-4811-b3fc-944c2606ac7c.png)
 
-In the project directory, you can run:
+### Adding New Item Page
+![Adding New Item](https://user-images.githubusercontent.com/58488936/135542267-259a9b64-ebcd-403e-8641-05e397e55175.png)
 
-### `npm start`
+### Item Details Page
+![Item details](https://user-images.githubusercontent.com/58488936/135542331-c49dd449-e7b7-4901-a1ee-5f8fbed91cbb.png)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Editing Item Page
+![Edit Item](https://user-images.githubusercontent.com/58488936/135542285-d65a91c6-d006-4438-8768-8e9160b5736f.png)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Cart/Order Page
+![Cart](https://user-images.githubusercontent.com/58488936/135542310-694af1da-fa4a-4646-8181-c4279a14bc7c.png)
 
-### `npm test`
+## Technologies
+- HTML5
+- CSS
+- Javascript
+- React.js
+- React-bootstrap
+- React-Hooks
+- React-Router-Dom
+- Axios
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Requirements
+- Node.js
+- Git
 
-### `npm run build`
+## Api
+[The T-Shirt API Documentation](https://github.com/racevedo12/T-Shirt-Back-End)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Installation/Running the app
+- Fork this repository.
+- Clone your forked repository.
+- Open up your terminal/command line to go to your cloned repository on your local machine.
+- Then type ```npm install ```  to get all the modules needed to run the application
+- To start the server and run the app locally type ```npm start```
+- If your preferred web browser did not open automatically, open up your browser and type ```localhost:3000```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Future Improvements
+- Add user authentication
+- Rating sellers
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Application Link
+* https://t-shirt-front-end.herokuapp.com/
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Contribution Guidelines
+Feel free to create an issue, or send an email.
