@@ -1,6 +1,12 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap');
+
+/* Default Styles */
 
 .App {
     text-align: center;
+    font-family: 'Poppins', sans-serif;
 }
 
 .main-header
@@ -21,6 +27,11 @@
 img
 {
     max-width: 20%;
+}
+
+.item-details-container
+{
+    font-family: 'Montserrat', sans-serif;
 }
 
 .spacing-groups

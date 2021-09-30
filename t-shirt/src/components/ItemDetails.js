@@ -86,15 +86,15 @@ function ItemDetails({ match }) {
         <div className="item-details-container">
             <h2> {item.name} </h2>
             <h3> {item.description} </h3>
-            <h3> ${item.price} </h3>
+            <h4> ${item.price} </h4>
 
-            <Button variant="secondary" onClick={addItemToCart}>
+            <Button variant="outline-success" onClick={addItemToCart}>
                 Add To Cart
             </Button>
-            <Button variant="secondary" onClick={editItem}>
+            <Button variant="outline-primary" onClick={editItem}>
                 Edit
             </Button>
-            <Button variant="secondary" onClick={deleteItem}>
+            <Button variant="outline-danger" onClick={deleteItem}>
                 Delete
             </Button>
         </div>
