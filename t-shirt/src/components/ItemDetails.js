@@ -85,7 +85,7 @@ function ItemDetails({ match }) {
     return (
         <div className="item-details-container">
             <h2> {item.name} </h2>
-            <h3> {item.description} </h3>
+            <h4> {item.description} </h4>
             <h4> ${item.price} </h4>
 
             <Button 
