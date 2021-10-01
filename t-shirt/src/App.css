@@ -80,3 +80,10 @@ img
 {
     margin-right: 5%;
 }
+
+.email-form-container
+{
+    position: relative;
+    left: 15%;
+    margin-bottom: 3%;
+}

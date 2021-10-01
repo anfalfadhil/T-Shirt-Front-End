@@ -9,8 +9,6 @@ import OrderList from "./components/OrderList";
 import Bitcoin from "./components/Bitcoin";
 import ContactUs from "./components/ContactForm";
 import ContactMe from "./components/EmailUs";
-// import PostNewItem from "./components/PostNewItem";
-
 import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
 
