@@ -62,7 +62,7 @@ This is a react based application where people can buy and/or sell items. Users 
 
 ## Application Link
 
-- https://t-shirt-front-end.herokuapp.com/
+- https://new-t-shirt.herokuapp.com/
 
 ## Contribution Guidelines
 
