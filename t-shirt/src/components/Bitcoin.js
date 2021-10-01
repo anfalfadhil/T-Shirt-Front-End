@@ -23,6 +23,7 @@ const Bitcoin = () => {
       <br />
 
       <h2 color="red">Pay in Bitcoin!!</h2>
+
       <img
         src="https://i.imgur.com/YjqbUjv.jpeg"
         alt="Bitcoin Logo"
@@ -31,7 +32,7 @@ const Bitcoin = () => {
       />
 
       <br />
-      <br />
+      {/* <br /> */}
       <br />
 
       <img src="https://i.imgur.com/Rw8Sw9e.jpeg" alt="Bitcoin QR Code" />
