@@ -2,7 +2,7 @@
 
 # Description
 
-This is a react based application where people can buy and/or sell items. Users can view lists of items for sale and select them to add to an order. Users can also post items for sale, update post information, pay for items in cryptocurrency, and remove posts.
+This is a react based application where people can buy and/or sell items. Users can view lists of items for sale and select them to add to an order. Users can also post items for sale, update post information, pay for items in cryptocurrency, contact the hosts or others via email, and remove posts.
 
 ## Screenshots
 
