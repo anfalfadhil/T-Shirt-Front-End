@@ -40,6 +40,10 @@ const ContactUs = () => {
       <input type="text" name="user_name" />
       <label>Email</label>
       <input type="email" name="user_email" />
+
+      <br />
+      <br />
+
       <label>Items Wanted</label>
       <textarea name="message" />
       <input type="submit" value="Send" />
