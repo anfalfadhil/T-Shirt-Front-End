@@ -1,5 +1,5 @@
 import React from "react";
-import ContactUs from "./ContactForm";
+// import ContactUs from "./ContactForm";
 
 // Only works with Bitcoin Cash  - BCH (Not Bitcoin) - learn  more @ https://bitcoincash.org/
 
