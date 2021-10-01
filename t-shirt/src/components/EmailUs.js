@@ -1,8 +1,4 @@
 import React, { useRef } from "react";
-import Form from "react-bootstrap/Form";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-import Button from "react-bootstrap/Button";
 
 //Must install this -
 //npm install emailjs-com --save
@@ -39,81 +35,30 @@ const ContactMe = () => {
   //make route in react based off of order completion
 
   return (
+    <form className="form-container" ref={form} onSubmit={sendEmail}>
+      <label>Name</label>
+      <input type="text" name="user_name" />
+      <br />
+      <br />
+      <label>Email</label>
+      <input type="email" name="user_email" />
+      <br />
+      <br />
+      <label>Your Message</label>
+      <textarea name="message" />
 
-    <Form ref={form} onSubmit={sendEmail}>
-            <Form.Group as={Row} controlId="nameInput" className="spacing-groups email-form-container">
-                <Form.Label column sm="2">
-                    Name
-                </Form.Label>
-                <Col sm="5">
-                    <Form.Control
-                        type="text"
-                    />
-                </Col>
-            </Form.Group>
+      <input type="submit" value="Send" />
 
-            <Form.Group as={Row} controlId="emailInput" className="spacing-groups email-form-container">
-                <Form.Label column sm="2">
-                    Email
-                </Form.Label>
-                <Col sm="5">
-                    <Form.Control
-                        type="text"
-                    />
-                </Col>
-            </Form.Group>
+      <br />
+      <br />
+      <br />
 
-            <Form.Group as={Row} controlId="itemsInput" className="spacing-groups email-form-container">
-                <Form.Label column sm="2">
-                    Your Message
-                </Form.Label>
-                <Col sm="5">
-                    <Form.Control as="textarea"/>
-                </Col>
-            </Form.Group>
-
-            <Button
-                className="new-item-save-button"
-                variant="outline-primary" 
-                size="lg" 
-                type="submit"
-                >Send
-            </Button>
-
-            <br />
-            <br />
-            <br />
-            
-            <div>
-              Want to contact us?
-              <br />
-              Send email to dimilafl3@gmail.com
-            </div>
-    </Form>
-    // <form className="form-container" ref={form} onSubmit={sendEmail}>
-    //   <label>Name</label>
-    //   <input type="text" name="user_name" />
-    //   <br />
-    //   <br />
-    //   <label>Email</label>
-    //   <input type="email" name="user_email" />
-    //   <br />
-    //   <br />
-    //   <label>Your Message</label>
-    //   <textarea name="message" />
-
-    //   <input type="submit" value="Send" />
-
-    //   <br />
-    //   <br />
-    //   <br />
-
-    //   <div>
-    //     Want to contact us?
-    //     <br />
-    //     Send email to dimilafl3@gmail.com
-    //   </div>
-    // </form>
+      <div>
+        Want to contact us?
+        <br />
+        Send email to dimilafl3@gmail.com
+      </div>
+    </form>
   );
 };
 
